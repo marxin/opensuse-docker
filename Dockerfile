@@ -15,9 +15,6 @@ RUN ./configure --prefix=/abuild/bin/binutils --enable-gold --enable-plugins && 
 RUN rm -rf binutils-2.24.51
 ENV PATH /abuild/bin/binutils/bin/:$PATH
 
-RUN ld --version
-RUN which ld
-
 WORKDIR /abuild
 RUN wget http://downloads.sourceforge.net/inkscape/inkscape-0.48.5.tar.gz
 RUN tar xfvz inks*
