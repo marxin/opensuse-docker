@@ -18,5 +18,7 @@ ENV PATH /abuild/bin/binutils/bin/:$PATH
 WORKDIR /abuild
 RUN wget http://downloads.sourceforge.net/inkscape/inkscape-0.48.5.tar.gz
 RUN tar xfvz inks*
-RUN rm *.tar.*
 
+RUN wget http://de-mirror.gimper.net/pub/gimp/v2.8/gimp-2.8.8.tar.bz2
+RUN tar xfvz gimp*
+RUN rm *.tar.*
