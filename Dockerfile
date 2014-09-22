@@ -24,7 +24,7 @@ RUN mkdir gimp && tar xfj gimp*.tar.bz2 -C gimp --strip-components=1
 
 RUN wget -q --no-check-certificate https://kernel.org/pub/linux/kernel/v3.x/testing/linux-3.17-rc6.tar.xz
 RUN mkdir linux && tar xJf linux-*.tar.xz -C linux --strip-components=1
-RUN wget -q --no-check-certificate https://git.kernel.org/cgit/linux/kernel/git/next/linux-next.git/plain/include/linux/compiler-gcc5.h?id=refs/tags/next-20140922 -o compiler-gcc5.h
+RUN wget --no-check-certificate https://git.kernel.org/cgit/linux/kernel/git/next/linux-next.git/plain/include/linux/compiler-gcc5.h?id=refs/tags/next-20140922  -O compiler-gcc5.h
 
 RUN cd linux && cp ../compiler-gcc5.h include/linux && make allyesconfig
 
