@@ -19,6 +19,6 @@ WORKDIR /abuild
 RUN wget http://downloads.sourceforge.net/inkscape/inkscape-0.48.5.tar.gz
 RUN tar xfvz inks*
 
-RUN wget http://de-mirror.gimper.net/pub/gimp/v2.6/gimp-2.6.12.tar.bz2
+RUN wget http://de-mirror.gimper.net/pub/gimp/v2.8/gimp-2.8.14.tar.bz2
 RUN tar xfvj gimp*
 RUN rm *.tar.*
