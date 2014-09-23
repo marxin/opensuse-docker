@@ -5,7 +5,9 @@ RUN mkdir /abuild
 WORKDIR /abuild
 
 RUN zypper up --skip-interactive
-RUN zypper --non-interactive --gpg-auto-import-keys install git wget unzip intltool pkg-config libpng16-devel gc-devel freetype2-devel liblcms2-devel libxml2-devel libxslt-devel gsl-devel boost-devel popt-devel flex make zip gcc-c++ gcc gcc-32bit gmp-devel mpfr-devel mpc-devel tar bison which gtkmm3-devel gtkmm2-devel strace vim babl-devel gegl-devel libtiff-devel libjpeg-devel python-devel python-gtk-devel bc
+RUN zypper --non-interactive --gpg-auto-import-keys install git wget unzip intltool pkg-config libpng16-devel gc-devel freetype2-devel liblcms2-devel libxml2-devel libxslt-devel gsl-devel boost-devel popt-devel flex make zip gcc-c++ gcc gcc-32bit gmp-devel mpfr-devel mpc-devel tar bison which gtkmm3-devel gtkmm2-devel strace vim babl-devel gegl-devel libtiff-devel libjpeg-devel python-devel python-gtk-devel bc autoconf autoconf213 dbus-1-devel dbus-1-glib-devel yasm-devel libogg-devel alsa-devel libpulse-devel libXt-devel
+
+ENV SHELL /bin/bash
 
 WORKDIR /abuild
 RUN wget -q ftp://sourceware.org/pub/binutils/snapshots/binutils-2.24.51.tar.bz2
